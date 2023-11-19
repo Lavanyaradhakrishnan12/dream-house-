@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url('image/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 90%;
+    /* above one  */
+    margin: auto;
+    padding: 10px 0;
+    /* top and bottom onlu 35px left and right  0*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 90px;
+    /* font-style: italic; */
+    cursor: pointer;
+    font-size: 15px;
+    margin: 8px 0;
+    padding: 2px 8px;
+    color:#fff;
+    border: 3px solid #009688;
+    text-align: center;
+    border-radius: 5px;
+    
+
+}
+.navbar ul li{
+    list-style:none;
+    display: inline-block;
+    margin: 0 8px;
+    /* above one */
+    font-size: 10px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li ::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    /* these lines should come back when we hover. */
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+
+}
+.navbar ul li :hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+
+}
+.content h2{
+    font-size: 25px;
+    margin-top: 80px;
+    
+}
+.content p{
+    font-size:10px;
+    margin: 10px auto;
+    font-weight: 100;
+    line-height: 15px;
+}
+button{
+    width: 150px;
+    /* 150 is enough for button */
+    padding: 5px 0;
+    text-align: center;
+    margin: 10px 10px;
+    border:2px solid #009688;
+    border-radius: 25px;
+    font-weight: bold;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+
+}
+button :hover{
+    border: none;
+}
